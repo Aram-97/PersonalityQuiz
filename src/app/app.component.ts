@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { QuizComponent } from './quiz/quiz.component';
 
 @Component({
-  selector: 'my-app',
+  selector: 'app-root',
   template: `
   <div class="container">
   	<app-quiz></app-quiz>
