@@ -83,7 +83,7 @@ export class QuizComponent implements OnInit{
 		}
 		for(var i=0; i < this.results.length; i++) {
 			for(var k=0; k < answers.length; k++) {
-				if(this.results[k].matrix === answers[k])
+				if(this.results[i].matrix[k] === answers[k])
 					count++;
 				if(count >= 3) {
 					default_quote = this.results[k].quote;
