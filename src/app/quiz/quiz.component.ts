@@ -72,8 +72,9 @@ export class QuizComponent implements OnInit{
 	}
 
 	getResult() {
+		var count = 0;
 		var answers = [0,0,0];
-		var result = "You're smart!";
+		var default_quote = "You're smart!";
 		for(var i=0; i < this.quizzes.length; i++) {
 			for(var k=0; k < this.quizzes[i].choices.length; k++){
 				if(this.quizzes[i].choices[k].selected === true)
@@ -81,10 +82,16 @@ export class QuizComponent implements OnInit{
 			}
 		}
 		for(var i=0; i < this.results.length; i++) {
-			if(this.results[i].matrix === answers)
-				result = this.results[i].quote;
+			for(var k=0; k < answers.length; k++) {
+				if(this.results[k].matrix === answers[k])
+					count++;
+				if(count >= 3) {
+					default_quote = this.results[k].quote;
+				}
+			}
+			count = 0;
 		}
-		return result;
+		return default_quote;
 	}
 
 	onSubmit() {
