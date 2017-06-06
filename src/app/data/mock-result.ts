@@ -1,7 +1,8 @@
 import { Result } from '../models/result';
 
 export const RESULTS: Result[] = [
-	{matrix: [101,103,102], quote: 'You are a dog'},
-	{matrix: [104,101,103], quote: 'You are a cat'},
-	{matrix: [102,104,101], quote: 'You are a fish'}
+	{matrix: [102,101,101], quote: 'Dog is your spirit animal'},
+  {matrix: [104,102,102], quote: 'Cat is your spirit animal'},
+  {matrix: [101,103,103], quote: 'Fish is your spirit animal'},
+  {matrix: [103,104,104], quote: 'Bird is your spirit animal'}
 ];
